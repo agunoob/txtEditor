@@ -1,0 +1,54 @@
+:root {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body .options, body .page {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(155, 248, 255, 0.2)));
+  background-image: linear-gradient(to bottom left, rgba(255, 255, 255, 0.3), rgba(155, 248, 255, 0.2));
+  -webkit-box-shadow: 0.1rem 0.1rem 1rem rgba(128, 128, 128, 0.3);
+          box-shadow: 0.1rem 0.1rem 1rem rgba(128, 128, 128, 0.3);
+  border: solid 0.2rem;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to top right, rgba(206, 206, 206, 0.5), rgba(155, 248, 255, 0.4));
+}
+
+body .options {
+  height: 4rem;
+  width: 80%;
+}
+
+body .page {
+  height: 70%;
+  width: 80%;
+  padding: 2rem;
+  outline: none;
+  resize: none;
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=main.css.map */
