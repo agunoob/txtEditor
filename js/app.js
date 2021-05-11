@@ -13,6 +13,16 @@ const page = document.querySelector('#page');
 const options = document.querySelectorAll('.option');
 
 
+//animation for buttons
+options.forEach(function(element){
+    element.addEventListener('click', function(){
+        element.classList.remove('animation');
+        void element.offsetWidth; //to remove animation and then add it
+        element.classList.add('animation');
+    })
+});
+
+
 //save my current work in local storage
 onkeyup = function() {
     localStorage.setItem('myCurrentWork', JSON.stringify(page.innerHTML))
@@ -20,7 +30,7 @@ onkeyup = function() {
 window.onload = function(){
     const giveMeMyWork = JSON.parse(window.localStorage.getItem('myCurrentWork'));
     page.innerHTML = giveMeMyWork;
-}
+};
 
 
 //txt options
@@ -46,6 +56,7 @@ newPage.onclick = function makeNewPage(){
         let k = confirm('Is this document saved?');
         if(k == true){
             page.innerHTML = '';
+            localStorage.setItem('myCurrentWork', JSON.stringify(page.innerHTML))
         }
         else{
             return false;
@@ -107,6 +118,8 @@ deletePage.onclick = function makeDeletePage(){
     }
 };
 
+
+//local storage
 function savingToLokalStorage(){
     let dataBase = JSON.parse(localStorage.getItem("dataBase"));
     save.onclick = function makeSave(){
@@ -132,5 +145,4 @@ function savingToLokalStorage(){
         localStorage.setItem("dataBase", JSON.stringify([]));
     }
 };
-
 savingToLokalStorage();

@@ -68,6 +68,41 @@ body .options-bar .txt-options .option, body .options-bar .document-options .opt
   cursor: pointer;
 }
 
+body .options-bar .txt-options .animation, body .options-bar .document-options .animation {
+  -webkit-animation: showClick 0.8s ease-in-out;
+          animation: showClick 0.8s ease-in-out;
+}
+
+@-webkit-keyframes showClick {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes showClick {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 body .options-bar .txt-options {
   width: 35%;
 }
@@ -141,6 +176,26 @@ body .modal-bg .modal {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: openModal 0.3s ease-in;
+          animation: openModal 0.3s ease-in;
+}
+
+@-webkit-keyframes openModal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes openModal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 body .modal-bg .modal .div-for-doc {

@@ -37,15 +37,24 @@ body{
             .option{
                 width: 2.5rem;
                 cursor: pointer;
+                }
+
+            .animation{
+                @keyframes showClick {
+                    0% {transform: scale(1)}
+                    20% {transform: scale(0.9)}
+                    100% {transform: scale(1)}
+                };
+                animation: showClick 0.8s ease-in-out;
             }
         }
 
         .txt-options{
-            width: 35%
+            width: 35%;
         }
 
         .document-options{
-            width: 45%
+            width: 45%;
         }
     }
 
@@ -81,7 +90,6 @@ body{
         justify-content: center;
 
         .modal{
-          
             height: 60%;
             width: 40%;
             @include backgroundColor;
@@ -89,6 +97,11 @@ body{
             display: flex;
             flex-direction: column;
             align-items: center;
+            @keyframes openModal {
+                0% {opacity: 0}
+                100% {opacity: 1}
+            };
+            animation: openModal 0.3s ease-in;
 
             .div-for-doc{
                 height: 20rem;
