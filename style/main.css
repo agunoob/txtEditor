@@ -23,32 +23,83 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-body .options, body .page {
-  background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(155, 248, 255, 0.2)));
-  background-image: linear-gradient(to bottom left, rgba(255, 255, 255, 0.3), rgba(155, 248, 255, 0.2));
+body .options-bar, body .bg-for-page {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(255, 255, 255, 0.4)), to(rgba(170, 249, 255, 0.2)));
+  background-image: linear-gradient(to bottom left, rgba(255, 255, 255, 0.4), rgba(170, 249, 255, 0.2));
   -webkit-box-shadow: 0.1rem 0.1rem 1rem rgba(128, 128, 128, 0.3);
           box-shadow: 0.1rem 0.1rem 1rem rgba(128, 128, 128, 0.3);
   border: solid 0.2rem;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to top right, rgba(206, 206, 206, 0.5), rgba(155, 248, 255, 0.4));
+  border-image-source: linear-gradient(to top right, rgba(255, 255, 255, 0.4), rgba(170, 249, 255, 0.3));
 }
 
-body .options {
+body .options-bar {
   height: 4rem;
-  width: 80%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-body .page {
-  height: 70%;
-  width: 80%;
-  padding: 2rem;
+body .options-bar .txt-options, body .options-bar .document-options {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .options-bar .txt-options .option, body .options-bar .document-options .option {
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+body .options-bar .txt-options {
+  width: 35%;
+}
+
+body .options-bar .document-options {
+  width: 45%;
+}
+
+body .bg-for-page {
+  height: 85%;
+  width: 90%;
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .bg-for-page .page {
+  height: 95%;
+  width: 75%;
+  padding: 5rem;
   outline: none;
   resize: none;
+  border: solid 0.1rem #979797;
   font-size: 1.5rem;
+  background-color: white;
+  overflow: auto;
 }
 /*# sourceMappingURL=main.css.map */

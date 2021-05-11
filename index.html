@@ -5,24 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style/main.css">
-    <title>edytor txt</title>
+    <title>txt editor</title>
 </head>
 <body>
 
     <div class="options-bar">
         <div class="txt-options">
-            <img class="option" src="./icons/bold.png">
-            <img class="option" src="./icons/italic.png">
-            <img class="option" src="./icons/list.png">
+            <img id="bold" class="option" src="./icons/bold.png">
+            <img id="italic" class="option" src="./icons/italic.png">
+            <img id="list" class="option" src="./icons/list.png">
         </div>
         <div class="document-options">
-            <img class="option" src="./icons/delete.png">
-            <img class="option" src="./icons/save.png">
+            <img id="new-page" class="option" src="./icons/newPage.png">
+            <img id="open-page" class="option" src="./icons/openFile.png">
+            <img id="delete-page" class="option" src="./icons/delete.png">
+            <img id="save" class="option" src="./icons/save.png">
         </div>
     </div>
-    <label for="page"></label>
-    <textarea id="page" class="page" name="page" autofocus></textarea>
-
+    <div class="bg-for-page">
+        <div id="page" class="page" name="page" autofocus contenteditable="true"></div>
+    </div>
 
     <script src="./js/app.js"></script>
 </body>
