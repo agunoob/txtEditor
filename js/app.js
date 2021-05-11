@@ -39,11 +39,12 @@ deletePage.onclick = function makeDeletePage(){
     console.log('delete')
 };
 
-
-
 let dataBase = JSON.parse(localStorage.getItem("dataBase"));
 save.onclick = function makeSave(){
-    if (page.innerHTML != null || page.innerHTML !=''){
+    if (page.innerHTML == null || page.innerHTML == ''){
+        alert('Your document is empty');
+    }
+    else {
         let today = new Date();
         let dateNow = today.getFullYear()+ '-' + (today.getMonth()+1)+ '-' + today.getDate()+ ' ' + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         
@@ -56,9 +57,6 @@ save.onclick = function makeSave(){
         dataBase = JSON.parse(localStorage.getItem("dataBase"));
         dataBase.push(newDocument);
         localStorage.setItem("dataBase", JSON.stringify(dataBase));
-    }
-    if (page.innerHTML == null || page.innerHTML ==''){
-            alert('Your document is empty');
     }
 }
 if (dataBase == null || dataBase.length == 0){
