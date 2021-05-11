@@ -1,0 +1,111 @@
+:root{
+    font-size: 10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .options-bar, .bg-for-page{
+    @include backgroundColor;
+    }
+
+    .options-bar{
+        height: 4rem;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .txt-options, .document-options{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .option{
+                width: 2.5rem;
+                cursor: pointer;
+            }
+        }
+
+        .txt-options{
+            width: 35%
+        }
+
+        .document-options{
+            width: 45%
+        }
+    }
+
+    .bg-for-page{
+        height: 85%;
+        width: 90%;
+        margin-top: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .page{
+            height: 95%;
+            width: 75%;
+            padding: 5rem;
+            outline: none;
+            resize: none;
+            border: solid 0.1rem rgb(151, 151, 151);
+            font-size: 1.5rem;
+            background-color: rgb(255, 255, 255);
+            overflow: auto;
+        }
+    }
+
+    .modal-bg{
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .modal{
+          
+            height: 60%;
+            width: 40%;
+            @include backgroundColor;
+            overflow-y: auto; //????
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .div-for-doc{
+                height: 20rem;
+                width: 80%;
+                margin: 1rem 1rem 1rem 1rem;
+                @include backgroundColor;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                .show-date{
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    letter-spacing: 0.1rem;
+                }
+            }
+        }
+    }
+}

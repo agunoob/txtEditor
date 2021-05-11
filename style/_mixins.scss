@@ -1,0 +1,7 @@
+@mixin backgroundColor{
+    background-image: linear-gradient(to bottom left, rgba(255, 255, 255, 0.4), rgba(170, 249, 255, 0.2));
+    box-shadow: 0.1rem 0.1rem 1rem rgba(128, 128, 128, 0.3);
+    border: solid 0.2rem;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to top right, rgba(255, 255, 255, 0.4), rgba(170, 249, 255, 0.3));
+}
